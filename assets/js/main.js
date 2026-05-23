@@ -318,10 +318,12 @@ function renderCart() {
 
   // Show/Hide floating cart on mobile
   if (openCartMobileButton) {
-    if (totals.quantity > 0 && window.innerWidth <= 620) {
+    if (totals.quantity > 0) {
       openCartMobileButton.hidden = false;
+      openCartMobileButton.style.display = "flex";
     } else {
       openCartMobileButton.hidden = true;
+      openCartMobileButton.style.display = "none";
     }
   }
 

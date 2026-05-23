@@ -896,8 +896,22 @@ textarea:focus {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+  }
+
+  .header-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+    padding: 0.5rem 0;
+  }
+
+  .mobile-floating-cart[hidden] {
+    display: none;
   }
 
   .header-actions {
