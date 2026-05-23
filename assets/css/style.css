@@ -21,15 +21,14 @@
 }
 
 html {
-  height: 100%;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, .98) 0, transparent 50%),
-    radial-gradient(circle at 80% 15%, rgba(240, 221, 156, .45) 0, transparent 60%),
-    radial-gradient(circle at 20% 80%, rgba(255, 247, 220, .55) 0, transparent 60%),
-    radial-gradient(circle at 80% 80%, rgba(198, 217, 248, .55) 0, transparent 60%),
+  min-height: 100%;
+  background: 
+    radial-gradient(at 0% 0%, #fffdf5 0%, transparent 50%),
+    radial-gradient(at 100% 0%, #e0edff 0%, transparent 50%),
+    radial-gradient(at 100% 100%, #fff7dc 0%, transparent 50%),
+    radial-gradient(at 0% 100%, #e8f1ff 0%, transparent 50%),
     linear-gradient(135deg, #f3f8ff 0%, #fffdf5 50%, #f0f7ff 100%);
   background-attachment: fixed;
-  background-size: cover;
 }
 
 body {
@@ -39,6 +38,7 @@ body {
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   line-height: 1.45;
   overflow-x: hidden;
+  background: transparent;
 }
 
 button,
@@ -66,9 +66,9 @@ button:disabled {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 255, 255, .86);
-  border-bottom: 1px solid rgba(201, 162, 62, .28);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(201, 162, 62, .15);
+  backdrop-filter: blur(20px);
 }
 
 .header-inner {
@@ -234,14 +234,14 @@ button:disabled {
   min-height: 42px;
   padding-left: 2.2rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, .94);
-  border-color: rgba(201, 162, 62, .3);
+  background: rgba(255, 255, 255, .6);
+  border: 1px solid rgba(201, 162, 62, .2);
 }
 
 .filter-button {
   min-height: 42px;
-  background: rgba(255, 255, 255, .94);
-  border: 1px solid rgba(201, 162, 62, .34);
+  background: rgba(255, 255, 255, .6);
+  border: 1px solid rgba(201, 162, 62, .2);
   border-radius: 999px;
   color: var(--blue-900);
   padding: .58rem 1rem;
