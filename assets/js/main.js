@@ -311,6 +311,7 @@ function getCartTotals() {
 
 function renderCart() {
   const totals = getCartTotals();
+  const isCartOpen = cartDrawer.classList.contains("open");
 
   cartCount.textContent = totals.quantity;
   if (cartCountMobile) cartCountMobile.textContent = totals.quantity;
@@ -318,7 +319,7 @@ function renderCart() {
 
   // Show/Hide floating cart on mobile
   if (openCartMobileButton) {
-    if (totals.quantity > 0) {
+    if (totals.quantity > 0 && !isCartOpen) {
       openCartMobileButton.hidden = false;
       openCartMobileButton.style.display = "flex";
     } else {
@@ -349,6 +350,7 @@ function renderCart() {
 }
 
 function openCart() {
+  if (openCartMobileButton) openCartMobileButton.style.display = "none";
   cartDrawer.classList.add("open");
   cartDrawer.setAttribute("aria-hidden", "false");
   cartBackdrop.hidden = false;
@@ -358,6 +360,7 @@ function closeCart() {
   cartDrawer.classList.remove("open");
   cartDrawer.setAttribute("aria-hidden", "true");
   cartBackdrop.hidden = true;
+  renderCart();
 }
 
 function openFilters() {
