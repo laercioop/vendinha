@@ -1,0 +1,14 @@
+# Logs
+*.log
+
+# Chrome Profiles (Very heavy, do not upload)
+chrome-profile-*
+**/chrome-profile-*
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Archives
+*.zip
+*.rar

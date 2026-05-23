@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vendinha da ASJ</title>
+  <meta name="description" content="Vendinha da ASJ: produtos devocionais de São José com pedido pelo WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=3" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="shell header-inner">
+      <div class="brand">
+        <h1><span>Vendinha</span><span>da ASJ</span></h1>
+        <img src="assets/escudo_sem_flamula.png" alt="Escudo da Associação São José">
+      </div>
+
+      <nav class="desktop-tabs" aria-label="Navegação principal">
+        <a class="active" href="index.html">Vendinha</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="como-retirar.html">Como retirar</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-button" id="open-cart" type="button" aria-label="Abrir carrinho">
+          <span>Sacola</span>
+          <strong id="cart-count">0</strong>
+        </button>
+        <button class="menu-button" id="open-menu" type="button" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-backdrop" id="menu-backdrop" hidden></div>
+  <aside class="menu-drawer" id="menu-drawer" aria-label="Menu" aria-hidden="true">
+    <div class="menu-header">
+      <strong>Vendinha da ASJ</strong>
+      <button class="icon-button" id="close-menu" type="button" aria-label="Fechar menu">×</button>
+    </div>
+    <nav class="mobile-links" aria-label="Navegação mobile">
+      <a class="active" href="index.html">Vendinha</a>
+      <a href="sobre.html">Sobre a vendinha</a>
+      <a href="como-retirar.html">Como retirar</a>
+    </nav>
+  </aside>
+
+  <main class="shell">
+    <section class="home-search" aria-label="Pesquisa da vendinha">
+      <label class="quick-search" for="search-input">
+        <span aria-hidden="true">⌕</span>
+        <input id="search-input" type="search" placeholder="Pesquisar" autocomplete="off">
+      </label>
+
+      <button class="filter-button" id="open-filters" type="button">Pesquisa</button>
+    </section>
+
+    <section class="catalog" aria-live="polite">
+      <div class="catalog-head">
+        <div>
+          <p>Produtos de São José</p>
+          <h2>Escolha seus itens</h2>
+        </div>
+        <span id="results-meta"></span>
+      </div>
+
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+  </main>
+
+  <div class="filter-backdrop" id="filter-backdrop" hidden></div>
+  <aside class="filter-drawer" id="filter-drawer" aria-label="Pesquisa avançada" aria-hidden="true">
+    <div class="filter-header">
+      <div>
+        <p>Pesquisa</p>
+        <h2>Encontrar produto</h2>
+      </div>
+      <button class="icon-button" id="close-filters" type="button" aria-label="Fechar pesquisa">×</button>
+    </div>
+
+    <div class="filter-content">
+      <label>
+        <span>Buscar</span>
+        <input id="advanced-search-input" type="search" placeholder="Produto, categoria ou descrição" autocomplete="off">
+      </label>
+
+      <label>
+        <span>Categoria</span>
+        <select id="category-filter"></select>
+      </label>
+
+      <label>
+        <span>Preço</span>
+        <select id="price-filter">
+          <option value="all">Todos</option>
+          <option value="0-25">Até R$ 25</option>
+          <option value="25-50">R$ 25 a R$ 50</option>
+          <option value="50-100">R$ 50 a R$ 100</option>
+          <option value="100-99999">Acima de R$ 100</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Ordenar</span>
+        <select id="sort-select">
+          <option value="featured">Destaques</option>
+          <option value="name-asc">Nome A-Z</option>
+          <option value="price-asc">Menor preço</option>
+          <option value="price-desc">Maior preço</option>
+          <option value="available">Disponíveis</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="filter-footer">
+      <button class="clear-button" id="clear-filters" type="button">Limpar filtros</button>
+      <button class="apply-button" id="apply-filters" type="button">Aplicar</button>
+    </div>
+  </aside>
+
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <p>Pedido</p>
+        <h2>Carrinho</h2>
+      </div>
+      <button class="icon-button" id="close-cart" type="button" aria-label="Fechar carrinho">×</button>
+    </div>
+
+    <div class="cart-items" id="cart-items"></div>
+
+    <div class="cart-footer">
+      <label for="order-note">Observação</label>
+      <textarea id="order-note" rows="3" placeholder="Tamanho, cor, retirada, observações do pedido"></textarea>
+
+      <div class="totals">
+        <span>Total</span>
+        <strong id="cart-total">R$ 0,00</strong>
+      </div>
+
+      <button class="checkout-button" id="checkout-whatsapp" type="button">Finalizar no WhatsApp</button>
+    </div>
+  </aside>
+
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
