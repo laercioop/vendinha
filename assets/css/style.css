@@ -125,26 +125,33 @@ button:disabled {
   align-items: center;
   justify-content: center;
   gap: .45rem;
-  min-height: 44px;
-  padding: .6rem .85rem;
+  min-height: 40px;
+  padding: .5rem 1rem;
   background: linear-gradient(135deg, var(--blue-900), var(--blue-800));
-  border: 0;
+  border: none;
   border-radius: 999px;
   color: #fff;
   font-size: .82rem;
   font-weight: 700;
+  box-shadow: 0 4px 12px rgba(20, 40, 95, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(20, 40, 95, 0.2);
 }
 
 .cart-button strong {
   display: grid;
   place-items: center;
-  min-width: 24px;
-  height: 24px;
+  min-width: 22px;
+  height: 22px;
   padding: 0 .35rem;
   background: var(--gold-080);
   border-radius: 999px;
   color: var(--blue-900);
-  font-size: .75rem;
+  font-size: .7rem;
 }
 
 .header-actions {
@@ -153,7 +160,7 @@ button:disabled {
   justify-self: end;
   display: flex;
   align-items: center;
-  gap: .55rem;
+  gap: .75rem;
 }
 
 .desktop-tabs {
@@ -162,42 +169,49 @@ button:disabled {
   justify-self: end;
   display: flex;
   align-items: center;
-  gap: .35rem;
-  margin-right: 7.8rem;
+  gap: .5rem;
+  margin-right: 8.5rem;
 }
 
 .desktop-tabs a {
   border-radius: 999px;
   color: var(--blue-900);
-  padding: .55rem .8rem;
-  font-size: .82rem;
-  font-weight: 800;
+  padding: .5rem 1rem;
+  font-size: .85rem;
+  font-weight: 700;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-.desktop-tabs a:hover,
+.desktop-tabs a:hover {
+  background: rgba(20, 40, 95, 0.05);
+}
+
 .desktop-tabs a.active {
-  background: linear-gradient(135deg, var(--blue-900), var(--blue-800));
+  background: var(--blue-900);
   color: #fff;
-  box-shadow: inset 0 -2px 0 rgba(240, 221, 156, .75);
-}
-
-.page-cart-link {
-  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(20, 40, 95, 0.15);
 }
 
 .menu-button {
   display: none;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  background: rgba(255, 255, 255, .6);
-  border: 1px solid rgba(201, 162, 62, .2);
-  border-radius: 999px;
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.menu-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
 }
 
 .menu-button span {
