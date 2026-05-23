@@ -884,7 +884,52 @@ textarea:focus {
   }
 }
 
+.app-footer {
+  margin-top: 4rem;
+  padding: 2.5rem 0;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(201, 162, 62, .15);
+  color: var(--blue-900);
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-inner p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--blue-900);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
 @media (max-width: 620px) {
+  .app-footer {
+    padding: 2rem 0 6rem; /* Extra padding for floating buttons */
+  }
+}
   .shell {
     width: min(100% - 20px, 1120px);
   }
