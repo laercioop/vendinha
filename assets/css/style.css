@@ -929,17 +929,18 @@ textarea:focus {
   .app-footer {
     padding: 2rem 0 6rem; /* Extra padding for floating buttons */
   }
-}
+
   .shell {
-    width: min(100% - 20px, 1120px);
+    width: min(100% - 24px, 1120px);
   }
 
   .header-inner {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 58px 44px;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: .65rem;
-    min-height: 0;
+    gap: 0.5rem;
+    min-height: 72px;
+    padding: 0.5rem 0;
   }
 
   .brand {
@@ -948,10 +949,11 @@ textarea:focus {
 
   .brand h1 {
     grid-column: 1;
-    grid-row: 1;
-    font-size: clamp(2.25rem, 9vw, 2.65rem);
-    line-height: .82;
+    font-size: 1.15rem;
+    line-height: 1.1;
     white-space: normal;
+    text-align: left;
+    margin: 0;
   }
 
   .brand h1 span {
@@ -963,31 +965,21 @@ textarea:focus {
   }
 
   .brand img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 48px;
-    height: 48px;
-    margin: 0;
-  }
-
-  .header-inner {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 64px;
-    padding: 0.5rem 0;
-  }
-
-  .mobile-floating-cart[hidden] {
-    display: none;
+    position: static;
+    grid-column: 2;
+    transform: none;
+    width: 44px;
+    height: 44px;
+    margin: 0 auto;
   }
 
   .header-actions {
-    position: relative;
-    z-index: 10;
+    grid-column: 3;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    position: static;
+    transform: none;
   }
 
   .cart-button {
@@ -995,12 +987,19 @@ textarea:focus {
   }
 
   .menu-button {
-    position: relative;
-    width: 44px;
-    height: 44px;
+    position: static;
+    display: inline-flex !important;
+    width: 40px;
+    height: 40px;
     background: var(--blue-900);
     border: none;
     box-shadow: 0 4px 10px rgba(20, 40, 95, 0.2);
+  }
+
+  .menu-button span {
+    background: #fff;
+    width: 20px;
+    height: 2px;
   }
 
   .mobile-floating-cart {
