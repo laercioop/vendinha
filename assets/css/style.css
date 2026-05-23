@@ -232,8 +232,27 @@ button:disabled {
 
 .quick-search {
   position: relative;
-  width: min(100%, 320px);
+  width: 100%;
   min-width: 0;
+}
+
+.menu-filter-button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 0.5rem;
+  background: var(--blue-050);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--blue-900);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: left;
+  padding: .85rem 1rem;
+}
+
+.menu-filter-button:hover {
+  background: var(--line);
 }
 
 .quick-search span {
