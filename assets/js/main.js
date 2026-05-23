@@ -433,6 +433,7 @@ closeFiltersButton.addEventListener("click", closeFilters);
 filterBackdrop.addEventListener("click", closeFilters);
 applyFiltersButton.addEventListener("click", closeFilters);
 openCartButton.addEventListener("click", openCart);
+openCartMobileButton?.addEventListener("click", openCart);
 closeCartButton.addEventListener("click", closeCart);
 cartBackdrop.addEventListener("click", closeCart);
 checkoutButton.addEventListener("click", checkoutWhatsApp);
