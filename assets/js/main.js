@@ -99,6 +99,7 @@ const resultsMeta = document.getElementById("results-meta");
 const filterDrawer = document.getElementById("filter-drawer");
 const filterBackdrop = document.getElementById("filter-backdrop");
 const openFiltersButton = document.getElementById("open-filters");
+const openFiltersMenuButton = document.getElementById("open-filters-menu");
 const closeFiltersButton = document.getElementById("close-filters");
 const applyFiltersButton = document.getElementById("apply-filters");
 const cartDrawer = document.getElementById("cart-drawer");
@@ -322,6 +323,7 @@ function closeCart() {
 }
 
 function openFilters() {
+  if (typeof closeMenu === "function") closeMenu();
   advancedSearchInput.value = searchInput.value;
   filterDrawer.classList.add("open");
   filterDrawer.setAttribute("aria-hidden", "false");
@@ -401,7 +403,8 @@ advancedSearchInput.addEventListener("input", () => {
 });
 
 clearFilters.addEventListener("click", clearAllFilters);
-openFiltersButton.addEventListener("click", openFilters);
+openFiltersButton?.addEventListener("click", openFilters);
+openFiltersMenuButton?.addEventListener("click", openFilters);
 closeFiltersButton.addEventListener("click", closeFilters);
 filterBackdrop.addEventListener("click", closeFilters);
 applyFiltersButton.addEventListener("click", closeFilters);
