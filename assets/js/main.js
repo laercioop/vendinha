@@ -107,6 +107,8 @@ const cartBackdrop = document.getElementById("cart-backdrop");
 const openCartButton = document.getElementById("open-cart");
 const closeCartButton = document.getElementById("close-cart");
 const cartCount = document.getElementById("cart-count");
+const cartCountMobile = document.getElementById("cart-count-mobile");
+const openCartMobileButton = document.getElementById("open-cart-mobile");
 const cartItems = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
 const checkoutButton = document.getElementById("checkout-whatsapp");
@@ -311,7 +313,17 @@ function renderCart() {
   const totals = getCartTotals();
 
   cartCount.textContent = totals.quantity;
+  if (cartCountMobile) cartCountMobile.textContent = totals.quantity;
   cartTotal.textContent = formatCurrency(totals.value);
+
+  // Show/Hide floating cart on mobile
+  if (openCartMobileButton) {
+    if (totals.quantity > 0 && window.innerWidth <= 620) {
+      openCartMobileButton.hidden = false;
+    } else {
+      openCartMobileButton.hidden = true;
+    }
+  }
 
   if (!cart.length) {
     cartItems.innerHTML = `<div class="empty-state">Carrinho vazio.</div>`;
