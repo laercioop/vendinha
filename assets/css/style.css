@@ -799,6 +799,50 @@ textarea:focus {
   font-size: 1.25rem;
 }
 
+/* Mobile Add Animation */
+.add-animation-container {
+  position: fixed;
+  top: 75px; /* Below the menu button */
+  right: 15px;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.add-popup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue-900);
+  padding: 6px 12px 6px 6px;
+  border-radius: 99px;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(20, 40, 95, 0.3);
+  animation: slideInDown 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
+             fadeOut 0.3s ease 1s forwards;
+}
+
+.add-popup img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold-200);
+}
+
+.add-popup span {
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+@keyframes slideInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateY(10px); }
+}
+
 @media (max-width: 900px) {
   .desktop-tabs {
     display: none;
