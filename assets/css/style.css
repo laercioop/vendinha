@@ -23,11 +23,11 @@
 html {
   min-height: 100%;
   background: 
-    radial-gradient(at 0% 0%, #fffdf5 0%, transparent 50%),
-    radial-gradient(at 100% 0%, #e0edff 0%, transparent 50%),
-    radial-gradient(at 100% 100%, #fff7dc 0%, transparent 50%),
-    radial-gradient(at 0% 100%, #e8f1ff 0%, transparent 50%),
-    linear-gradient(135deg, #f3f8ff 0%, #fffdf5 50%, #f0f7ff 100%);
+    radial-gradient(at 10% 10%, #f0dd9c 0%, transparent 50%),
+    radial-gradient(at 90% 15%, #c6d9f8 0%, transparent 50%),
+    radial-gradient(at 15% 85%, #fff7dc 0%, transparent 50%),
+    radial-gradient(at 85% 85%, #adc9ff 0%, transparent 50%),
+    linear-gradient(135deg, #e6f0ff 0%, #fffdf5 50%, #d9e8ff 100%);
   background-attachment: fixed;
 }
 
