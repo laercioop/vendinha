@@ -829,42 +829,43 @@ textarea:focus {
   }
 
   .brand img {
-    position: absolute;
-    left: 50%;
-    grid-column: auto;
-    grid-row: auto;
-    width: 58px;
-    height: 58px;
-    transform: translateX(-50%);
+    position: static;
+    transform: none;
+    width: 54px;
+    height: 54px;
   }
 
   .header-actions {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    grid-column: auto;
-    grid-row: auto;
-    width: auto;
-    justify-content: flex-end;
-    transform: translateY(-50%);
+    position: static;
+    grid-column: 3;
+    grid-row: 1;
+    transform: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
   }
 
   .cart-button {
-    display: none;
+    display: flex;
+    padding: .5rem;
+    min-width: 44px;
   }
 
   .menu-button {
-    position: fixed;
-    top: 22px;
-    right: 10px;
-    z-index: 80;
+    position: static;
+    z-index: auto;
     display: inline-flex !important;
+    width: 48px;
+    height: 48px;
     background: var(--blue-900);
-    border-color: rgba(240, 221, 156, .65);
+    border: none;
+    box-shadow: 0 4px 10px rgba(20, 40, 95, 0.2);
   }
 
   .menu-button span {
     background: #fff;
+    width: 24px;
+    height: 3px;
   }
 
   .cart-button span {
