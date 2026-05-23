@@ -28,12 +28,13 @@ body {
 
 body {
   background:
-    radial-gradient(circle at 12% 8%, rgba(255, 255, 255, .98) 0 13rem, transparent 24rem),
-    radial-gradient(circle at 84% 10%, rgba(240, 221, 156, .55) 0 10rem, transparent 25rem),
-    radial-gradient(circle at 18% 78%, rgba(255, 247, 220, .68) 0 12rem, transparent 28rem),
-    radial-gradient(circle at 86% 40%, rgba(198, 217, 248, .76) 0 13rem, transparent 30rem),
-    linear-gradient(180deg, #edf5ff 0%, #fffdf5 45%, #e8f1ff 100%);
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, .98) 0, transparent 50%),
+    radial-gradient(circle at 80% 15%, rgba(240, 221, 156, .45) 0, transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(255, 247, 220, .55) 0, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(198, 217, 248, .55) 0, transparent 60%),
+    linear-gradient(135deg, #f3f8ff 0%, #fffdf5 50%, #f0f7ff 100%);
   background-attachment: fixed;
+  background-size: cover;
   color: var(--text);
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   line-height: 1.45;
