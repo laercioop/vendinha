@@ -246,12 +246,36 @@ function addToCart(productId) {
       id: product.id,
       name: product.name,
       price: product.price,
+      image: product.image,
       quantity: 1
     });
   }
 
   renderCart();
-  openCart();
+
+  if (window.innerWidth <= 620) {
+    showAddAnimation(product);
+  } else {
+    openCart();
+  }
+}
+
+function showAddAnimation(product) {
+  const container = document.getElementById("add-animation-container");
+  if (!container) return;
+
+  const popup = document.createElement("div");
+  popup.className = "add-popup";
+  popup.innerHTML = `
+    <img src="${product.image.replace("../", "")}" alt="">
+    <span>+1</span>
+  `;
+
+  container.appendChild(popup);
+
+  setTimeout(() => {
+    popup.remove();
+  }, 1400);
 }
 
 function updateQuantity(productId, delta) {
